@@ -3,420 +3,312 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
   <title> Resume</title>
-  <Author>AREEBA ABDUL RAHIM QURESHI</Author>
-  <style>
-    body {
-      
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #fcf2f9;
-      color: #000000;
-    }
-
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      padding: 50px;
-      background-color: #f7e7ef;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 30px;
-      
-    }
-  .profile{
-    position: relative;
-    right: 400px;
-    bottom: 150px;
-  }
-
-    .header h1 {
-      margin: 0;
-      font-size: 3em;
-      font-weight: bold;
-    }
-
-    .header h2 {
-      font-size: 1.5em;
-      font-weight: normal;
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .section h3 {
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .section ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .section li {
-      margin-bottom: 5px;
-    }
-
-    .section li span {
-      font-weight: bold;
-    }
-     #codeBlock {
-            display: none;
-            background-color: #f4f4f4;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            
-        }
-
-        button {
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: x-large;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
- .contact {
-      margin-bottom: 20px;
-    }
-
-    .contact ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .contact li {
-      margin-bottom: 5px;
-    }
-
-    .contact li span {
-      font-weight: bold;
-    }
-
-    .contact a {
-      color: #333;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    .skills {
-      margin-bottom: 20px;
-    }
-
-    .skills ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .skills li {
-      margin-bottom: 5px;
-    }
-
-    .skills li span {
-      font-weight: bold;
-    }
-
-    .languages {
-      margin-bottom: 20px;
-    }
-
-    .languages ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .languages li {
-      margin-bottom: 5px;
-    }
-
-    .languages li span {
-      font-weight: bold;
-    }
-
-    .hobbies {
-      margin-bottom: 20px;
-    }
-
-    .hobbies ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .hobbies li {
-      margin-bottom: 5px;
-    }
-
-    .hobbies li span {
-      font-weight: bold;
-    }
-    #toggle-button{
-      display: none;
-    }
-
-    /* Style for the timeline */
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-      padding: 0;
-      width: 100%;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 40%;
-      top: 0;
-      width: 2px;
-      height: 100%;
-      background-color: #ddd;
-      z-index: 1;
-    }
-
-    .timeline-item {
-      position: relative;
-      width: 50%;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 2;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 10px;
-      height: 10px;
-      background-color: #ddd;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 10px;
-      height: 10px;
-      background-color: #ddd;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    
-
-    .timeline-left{
-      position: relative;
-     right: 10px;
-    }
-
-   
-
-    .timeline-item.right {
-      float: right;
-      clear: right;
-      
-    }
-
-
-    
-
-    .timeline-item h4 {
-      margin-top: 0;
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .timeline-item p {
-      margin-bottom: 0;
-    }
-
-    /* Style for the toggle button */
-    .toggle-button {
-      display: inline-block;
-      padding: 8px 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      
-    }
-
-    .toggle-button:hover {
-      background-color: #45a049;
-    }
-
-    /* Style for the hidden content */
-    .hidden {
-      display: none;
-    }
-
-    /* Style for the visible content */
-    .visible {
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+ 
 </head>
 <body>
+
   <div class="container">
-    <HEADER>
-    <div class="header">
-        <img src="c:\Users\FUTURE TECH HYD\Desktop\images.jfif" alt="my image" 
-        style=" width: 250px;
-        height: 250px; 
-        border-radius: 50%; 
-        object-fit: cover">
-        
-      <h1>AREEBA QURESHI</h1>
-      <h2>WEB DEVELOPER</h2>
-      <div class="profile" >
-    </div>
-      
-    </div><HR>
-        <div class="section">
-            <h3>ABOUT ME</h3>
-            <div class="skills">
-              <ul>
-                <li> "It's me Areeba Rahim Qureshi. I have completed a 3-year diploma in CIT,<br>
-                     and I am also a digital marketer. Currently, I am pursuing a BS degree <br>
-                     and Countinue a course Artificial intelligencei Web 3.0 Meta Verse"
-                </li>
-              </ul>
+    <div class="left_side">
+        <div class="profileText">
+            <div class="imgBx">
+                <img src="c:\Users\sanaa\Desktop\img.PNG">
             </div>
-          </div>
-          <div class="section">
-            <h3>EXPERIENCES</h3>
-          <div class="timeline">
-            <div >
-             
-              <h4>TEACHING EXPERIENCES</h4>
-              <P>Zubair Montessori And Higher Secondary School</P>
-              <P>1 Year</P>
-              <p>Latifabad Hyderabad</p>
-            </div>
-          </div>
-    
-       
+            <h2>Areeba Qureshi<br><span>Web Developer<hr></span></h2>
         </div>
-    <div class="section">
-      <h3>CONTACT</h3>
-      <div class="contact">
-        <ul>
-          <li><span>   <i class="fa-solid fa-phone"></i></span> +92 313 361-34-30</li>
-            <!-- link daina hai email ka -->
-          <li><span> <i class="fa-solid fa-envelope"> </i></span> <a href="mailto:">areebarahim55@gmail.com</a></li>
-           <li><span> <i class="fa-solid fa-house"></i></span> Unit no: 8 Block F latifabad Hyderabad</li>
-        </ul>
-      </div>
-    </div>
-</HEADER>
-<main>
-    <div class="section">
-        <h3> <i class="fa-solid fa-person"></i>    PERSONAL INFORMATION</h3>
-      <div class="timeline">
-        <div class="timeline-left">
-            <div style="display: flex; gap: 40px;">
+        <div class="contactInfo">
+            <h3 class="title">Contact Info</h3>
             <ul>
-          <h4><li>Name:</li>
-          <li>Father Name:</li>
-          <li>Religion:</li>
-          <li>Sur Name:</li>
-          <li>Place of DOB:</li>
-          <li>Martial status:</li></h4>
-        </ul>
-        <ul style="position: relative; top: 20px;">
-            <li>Areeba</li>
-            <li>Abdul Rahim</li>
-            <li>Islam</li>
-            <li>Qureshi</li>
-            <li>Hyderabad</li>
-            <li>Single</li>
-        </ul>
-    </div>
-<button onclick="toggleCode()">EDUCATION</button>
+                <li style="display: flex;">
+                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span class="text">+92 3133 613430</span>
+                </li>
+                <li style="display: flex;">
+                    <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <span class="text">areebarahim55@gmail.com</span>
+                </li>
+                <li  style="display: flex;">
+                    <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                    <span class="text">linkedin.com/in/areeba-qureshi</span>
+                </li>
+                <li  style="display: flex;">
+                    <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                    <span class="text">https://github.com/areeba44</span>
+                </li>
+            </ul>
+        </div>
 
-    <div id="codeBlock">
-        <pre>
-            <div class="timeline">
-                <div >
-                  <h4>Government Girls Degree College</h4>
-                  <p>Bs in Computer Science Countinue...<br></p>
-                  <h4>COLLAGE</h4>
-                  <P>2020-2021</P>
-                  <P>Girls Degree College HYD</P>
-                  <H4>SCHOOL</H4>
-                  <p>2006-2018</p>
-                  <P>APSSRC HYD</P>
-                  <H4>Digital Marketing Course</H4>
-                  <p>Enablers Hyderabad</p>
+        <div class="contactInfo education">
+            <h3 class="title">Education</h3>
+            <ul>
+                <li>
+                    <h5>2023 - 2025</h5>
+                   <h4 style="color: rgb(249, 249, 249);  color: #fff;">AD Science in computer science</h4>
+                   <h4 style="color: rgb(249, 249, 249);">Girls Degree College</h4>
+                </li>
+                <li>
+                    <h5>2019 - 2021</h5>
+                   <h4 style="color: rgb(249, 249, 249);">Diploma of Assoicate Engineer</h4>
+                   <h4 style="color: rgb(249, 249, 249);">Poletechnical Girls College</h4>
+                </li>
+                <li>
+                    <h5>2020 - 2021</h5>
+                   <h4 style="color: rgb(249, 249, 249);">Intermidiated</h4>
+                   <h4 style="color: rgb(249, 249, 249);">Girls Degree College</h4>
+                </li>
+                <li>
+                    <h5>2006 - 2018</h5>
+                   <h4 style="color: rgb(249, 249, 249);">Matriculation</h4>
+                   <h4 style="color: rgb(249, 249, 249);">Army Public School (SRC)</h4>
+                </li>
+                </ul>
                 </div>
+                <div class="contactInfo language">
+                    <h3 class="title">Language</h3>
+                    <ul>
+                        <div class="lang">
+                            <div class="lang-name">English</div>
+                              <div class="lang-bar">
+                              <div class="lang-per" per="70%" style="max-width: 70%;"></div>
+                          </div>
+                              </div>
+                              <div class="lang">
+                                <div class="lang-name">Urdu</div>
+                                  <div class="lang-bar">
+                                  <div class="lang-per" per="80%" style="max-width: 80%;"></div>
+                              </div>
+                                  </div>
+                       
+                        
+                    </ul>
+                </div>
+                
+    </div>
+    <div class="right_side">
+        
+        <div class="about">
+            <h2 class="title2">Profile</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa natus quas, 
+                blanditiis provident exercitationem temporibus nostrum corporis inventore 
+                recusandae quibusdam consectetur numquam incidunt eaque rem quaerat 
+                ex, neque dolores voluptatem!</p>
+        </div>
+        <div class="about">
+            <h2 class="title2">About Me</h2>
+            <p>My self Areeba D/O AbdulRahim currently.I am doing AD science from Girls Degree College.I am also a student of GIAIC, pursing a course in Artifical Intelligence,web 3.0, & Metaverse.
+                Passionate about technology and consantly learing new skills to stay up-to-data with the latest
+                innovation.I am excited to collaborate and bring ideas to life. </p>
+        </div>
+        <div class="skill">
+            <h2 class="title2">PROFESSIONAL SKILLS</h2>
+            <div class="skill">
+          <div class="skill-name">Typescript</div>
+            <div class="skill-bar">
+            <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+        </div>
+            </div>
+            <div class="skill">
+          <div class="skill-name">Html</div>
+            <div class="skill-bar">
+            <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+        </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Taliwind</div>
+                  <div class="skill-bar">
+                  <div class="skill-per" per="70%" style="max-width: 70%;"></div>
               </div>
-             </pre>
-      </div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-name">Css</div>
+                      <div class="skill-bar">
+                      <div class="skill-per" per="80%" style="max-width: 80%;"></div>
+                  </div>
+                      </div>
+                      <div class="skill">
+                        <div class="skill-name">Next.js</div>
+                          <div class="skill-bar">
+                          <div class="skill-per" per="60%" style="max-width: 60%;"></div>
+                      </div>
+                          </div>
+                          <div class="skill">
+                            <div class="skill-name">Adobe Photoshop</div>
+                              <div class="skill-bar">
+                              <div class="skill-per" per="80%" style="max-width: 80%;"></div>
+                          </div>
+                              </div>
+                              <div class="skill">
+                                <div class="skill-name">Ms office</div>
+                                  <div class="skill-bar">
+                                  <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+                              </div>
+                                  </div><br><br>
+               
+               <div class="about interest">
+                <h2 class="title2">Interest</h2>
+                <ul>
+                    <li><i class="fa fa-header" aria-hidden="true"><space></i>Reading</li></space>
+                    <li><i class="fa fa-cutlery" aria-hidden="true"></i>Cooking</li>
+                    <li><i class="fa fa-laptop" aria-hidden="true"></i>Coding</li>
+                    <li><i class="fa fa-gamepad" aria-hidden="true"></i>Gaming</li>
+                </ul>
+        </div>
     </div>
-
-    <script>
-        function toggleCode() {
-            var codeBlock = document.getElementById('codeBlock');
-            if (codeBlock.style.display === 'none') {
-                codeBlock.style.display = 'block';
-            } else {
-                codeBlock.style.display = 'none';
-            }
-        }
-    </script>
-<div class="section">
-      <h3>SKILLS</h3>
-      <div class="skills">
-        <ul>
-          <li><span>Software:</span> Photoshop, Illustrator, InDesign, Microsoft Office, After Effects</li>
-        </ul>
-      </div>
     </div>
-
-    <div class="section">
-      <h3>LANGUAGES</h3>
-      <div class="languages">
-        <ul>
-          <li><span>English:</span> Fluent</li>
-          <li><span>Russian:</span> Fluent</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="section">
-      <h3>HOBBIES</h3>
-      <div class="hobbies">
-        <ul>
-          <li><span>Sport:</span> </li>
-        </ul>
-      </div>
-    </div>
-</main>
-  </div>
-  <script src="C:\Users\FUTURE TECH HYD\Desktop\HACKATON1\hack.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
